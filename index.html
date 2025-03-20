@@ -3,93 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>color flipper</title>
+    <title>Document</title>
+    <link rel="Stylesheet" href="style.css">
 </head>
 <body>
-    <style>
-
-        *{
-            font-family: cursive;
-            padding: 0%;
-            margin: 0%;
-        }
-        #div1{
-            display: flex;
-            justify-content: space-between;
-        }
-        h3{
-            font-size: large;
-            padding-right: 50px;
-        }
-
-        #div2{
-            background-color: aqua;
-            width: 100%;
-            height: 1000px;
-            text-align: center;
-            
-            
-        }
-        #btn{
-            color: white;
-        }
-
-
-    </style>
-
-    <div id="div1">
-        <h1>Color Flipper</h1>
-        <h3 id="code">#ffffff</h3>
-    </div>
-
-    <hr>
-
-    <div id="div2">
-        <button id="btn" onclick="change()">Change color</button>
-    </div>
-    
-    <script>
-        
-        var code= document.getElementById("code")
-        var col = document.getElementById("div2")
-        var col1 = document.getElementById("div1")
-        var col2 = document.getElementById("btn")
-
-        var hex=[0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f']
-
-        function randomNum(){
-            var res =  Math.floor(Math.random()*15);
-            return res;
-        }
-        console.log(randomNum());
-        
-
-        function change(){
-            var dcode='#'
-            for(i=1;i<=6;i++){
-                dcode += hex[randomNum()];
-            }
-            var dcode1 = '#'
-            for(i=1;i<=6;i++){
-                dcode1 += hex[randomNum()];
-            }
-            var dcode2='#'
-            for(i=1;i<=6;i++){
-                dcode2 += hex[randomNum()];
-            }
-            
-            
-            col.style.backgroundColor = dcode;
-            col1.style.backgroundColor = dcode1;
-            col2.style.backgroundColor = dcode2;
-            code.innerHTML = dcode;
-
-          
-        }
-        
-        
-       
-       
-    </script>
+   <div> 
+   
+    <h1>HEllO WORLD</h1>
+    <ul>
+        <li><a href="#">house9</a></li>
+        <li><a href="#">house2</a></li>
+        <li><a href="#">house</a></li>
+        <li  class="lk">hritha</li>
+    </ul></div>
 </body>
 </html>
