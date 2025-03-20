@@ -3,78 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tasks</title>
 </head>
 <body>
-    <style>
-        body{
-            background-color:aqua;
-        }
-        
-        .head{
-            background-color: black;
-            height: 400px;
-            width: 400px;
-            margin: 30%;
-            border: 5px solid;
-            border-radius: 10px;
-            text-align: center;
-        }
-        h1,p{
-            color: aqua;
-            text-align: center;
-        }
-        input{
-            padding: 5px;
-        }
-        .results{
-           
-            display: inline-flex;
-            justify-content: center;
-        }
+    <h1 id="id1" class="c1" >Hello world</h1>
+    <h1 id="id1" class="c1">Shankar</h1>
+    <h1 id="id1" class="c1">Kishore</h1>
 
-        button:hover{
-            cursor: pointer;
-        }
-
-    </style>
-
-    <div class="head">
-        <h1>Palindrome</h1>
-        <input  type="text" id="ans" placeholder="enter a word or number" >
-        <button onclick="palindrome()">check</button>
-        <p>Enter the word to check</p>
-        <p>result :</p>
-        <div class="results">
-            <p style="color: blanchedalmond;" id="result"> </p> 
-        </div>
-        
-    </div>
+    <button id="btn" >click me</button>
 
     <script>
+        // var value= document.querySelector("h1");
+        // value.textContent= "Ranjith";
+
+        //var value=document.querySelector("#id1");
+        //value.innerHTML = "Ranjith";
+
+        // var value= document.querySelector(".c1")
+        // vlue.innerHTML = "ranjith";
+
+        // var value = document.querySelectorAll(".c1");
+        // console.log(value);
+        // for(i=0; i<value.length; i++){
+        //     value[2].textContent="sriramm"
+        // }
+
         
 
-        function palindrome(){
-            var word = document.getElementById("ans").value;
-            var arr = word.split("")
-            var res = "";
-            for(let i=arr.length-1; i>=0; i--){
-                    res += arr[i];
-            }
-            // console.log(res);
-            // var fres = document.getElementById("result")
-            // fres.innerHTML = res;
 
-            if(word == res){
-                document.getElementById("result").innerHTML =  " Its a palindr0me "
-            }
-            
-            else{
-                document.getElementById("result").innerHTML =  " Its not a palindr0me "
-            }
-        }
+
     </script>
-
-
 </body>
 </html>
