@@ -3,35 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasks</title>
+    <title>color flipper</title>
 </head>
 <body>
-    <h1 id="id1" class="c1" >Hello world</h1>
-    <h1 id="id1" class="c1">Shankar</h1>
-    <h1 id="id1" class="c1">Kishore</h1>
+    <style>
 
-    <button id="btn" >click me</button>
+        *{
+            font-family: cursive;
+            padding: 0%;
+            margin: 0%;
+        }
+        #div1{
+            display: flex;
+            justify-content: space-between;
+        }
+        h3{
+            font-size: large;
+            padding-right: 50px;
+        }
 
+        #div2{
+            background-color: aqua;
+            width: 100%;
+            height: 1000px;
+            text-align: center;
+            
+            
+        }
+        #btn{
+            color: white;
+        }
+
+
+    </style>
+
+    <div id="div1">
+        <h1>Color Flipper</h1>
+        <h3 id="code">#ffffff</h3>
+    </div>
+
+    <hr>
+
+    <div id="div2">
+        <button id="btn" onclick="change()">Change color</button>
+    </div>
+    
     <script>
-        // var value= document.querySelector("h1");
-        // value.textContent= "Ranjith";
+        
+        var code= document.getElementById("code")
+        var col = document.getElementById("div2")
+        var col1 = document.getElementById("div1")
+        var col2 = document.getElementById("btn")
 
-        //var value=document.querySelector("#id1");
-        //value.innerHTML = "Ranjith";
+        var hex=[0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f']
 
-        // var value= document.querySelector(".c1")
-        // vlue.innerHTML = "ranjith";
-
-        // var value = document.querySelectorAll(".c1");
-        // console.log(value);
-        // for(i=0; i<value.length; i++){
-        //     value[2].textContent="sriramm"
-        // }
-
+        function randomNum(){
+            var res =  Math.floor(Math.random()*15);
+            return res;
+        }
+        console.log(randomNum());
         
 
+        function change(){
+            var dcode='#'
+            for(i=1;i<=6;i++){
+                dcode += hex[randomNum()];
+            }
+            var dcode1 = '#'
+            for(i=1;i<=6;i++){
+                dcode1 += hex[randomNum()];
+            }
+            var dcode2='#'
+            for(i=1;i<=6;i++){
+                dcode2 += hex[randomNum()];
+            }
+            
+            
+            col.style.backgroundColor = dcode;
+            col1.style.backgroundColor = dcode1;
+            col2.style.backgroundColor = dcode2;
+            code.innerHTML = dcode;
 
-
+          
+        }
+        
+        
+       
+       
     </script>
 </body>
 </html>
